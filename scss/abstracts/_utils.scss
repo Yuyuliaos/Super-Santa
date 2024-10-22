@@ -1,0 +1,62 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+.mobile-img {
+  @include mq.respond-to(mq.$phone) {
+    width: 75%;
+  }
+}
+
+.mobile-text {
+  @include mq.respond-to(mq.$phone) {
+    color: vars.$clr-main;
+  }
+}
+
+.size-container-text {
+  @include mq.respond-to(mq.$phone) {
+    width: 80%;
+  }
+}
+
+
+.viewport {
+  @include mq.respond-to(mq.$phone) {
+    height: 100vh;
+    width: auto;
+  }
+}
+
+.rectangle {
+  @include mq.respond-to(mq.$phone) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #2828289f;
+    z-index: 7;
+  }
+}
+
+.font-xxs{
+  @include mq.respond-to(mq.$phone) {
+    font-size: vars.$fs-xxs;
+  }
+ }
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}

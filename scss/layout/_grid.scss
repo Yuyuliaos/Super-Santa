@@ -1,0 +1,73 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+
+.container-welcome {
+  position: absolute;
+  z-index: 7;
+  text-align: left;
+  display: flex;
+  max-width: 500px;
+  left: 50px;
+  overflow: hidden;
+  flex-direction: column;
+  @include mq.respond-to(mq.$phone) {
+    margin-left: -2rem;
+    margin-bottom: 10rem;
+    display: flex;
+    overflow-x: hidden;
+  }
+
+}
+
+.h1{
+    margin: 0;
+}
+
+.p{
+    padding-top: 2rem;
+    margin: 0;
+}
+
+
+
+
+.m1.parallax-left {
+    left: 0;
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+    @include mq.respond-to(mq.$phone) {
+      z-index: 4;
+    }
+  }
+  
+  .m2.parallax-right {
+    right: 0;
+    transform: translateX(0);
+    transition: transform 0.1s ease-out;
+    @include mq.respond-to(mq.$phone) {
+      z-index: 2;
+    }
+  }
+
+  .parallax-botton{
+    bottom: 0;
+    transform: translateY(0);
+    transition: transform 0.1s ease-out;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+
+  .controls{
+    position: relative;
+    overflow: hidden;
+    @include mq.respond-to(mq.$phone) {
+      overflow: visible;
+      position: absolute;
+      left: 3rem ;
+      top: 1rem;
+      z-index: 7;
+    }
+  }
+

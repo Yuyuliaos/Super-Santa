@@ -1,0 +1,24 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+.open-menu{
+    display: none;
+    @include mq.respond-to(mq.$phone) {
+        display: block;
+        border: none;
+        background-color: transparent;
+        width: 35px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+.close-menu{
+    display: none;
+    @include mq.respond-to(mq.$phone) {
+        display: block;
+        border: none;
+        background-color: transparent;
+        width: 30px;
+    }
+}

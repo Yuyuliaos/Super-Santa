@@ -1,0 +1,31 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+
+.main-font{
+    font-family: vars.$ff-main;
+}
+
+.second-font{
+    font-family: vars.$ff-secondary;
+}
+
+.main-title{
+    font-size: vars.$fs-xl;
+}
+
+.secondary-title{
+    font-size: vars.$fs-xs;
+}
+
+.main-color{
+    color: vars.$clr-main;
+}
+
+.secondary-color{
+    color: vars.$clr-secondary;
+    @include mq.respond-to(mq.$phone) {
+        color: vars.$clr-main;
+      }
+}
+

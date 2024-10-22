@@ -1,0 +1,108 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+.section-welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  @include mq.respond-to(mq.$phone) {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+}
+
+.section-items {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 10%;
+
+  @include mq.respond-to(mq.$phone) {
+    display: none;
+  }
+  @include mq.respond-to(mq.$large-desktop) {
+    height: 117vh;
+    width: 100%;
+
+  }
+}
+
+.section-features {
+  position: relative;
+  display: flex;
+
+  @include mq.respond-to(mq.$phone) {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+  }
+
+  @include mq.respond-to(mq.$large-desktop) {
+    background-color: vars.$clr-main;
+    height: 30rem;
+    
+  }
+}
+
+.section-goglin {
+  height: 50vh;
+  width: auto;
+  display: flex;
+
+  @include mq.respond-to(mq.$phone) {
+    height: 100vh;
+    display: flex;
+  }
+}
+
+.section-controls {
+  background-color: #136000;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+
+  @include mq.respond-to(mq.$phone) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  @include mq.respond-to(mq.$large-desktop) {
+    height: 100vh;
+  }
+}
+
+
+.section-history {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+.section-items-mobile{
+  display: none;
+  @include mq.respond-to(mq.$phone) {
+    display: block;
+    height: 100vh;
+    align-items: center;
+    overflow: hidden;
+  }
+}

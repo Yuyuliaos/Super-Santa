@@ -1,0 +1,63 @@
+@use "../abstracts/vars" as vars;
+@use "../abstracts/media-queries" as mq;
+
+.nav {
+  background-color: vars.$clr-main;
+  width: auto;
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include mq.respond-to(mq.$phone) {
+    height: 4rem;
+    width: auto;
+  }
+
+}
+
+.main-logo {
+  margin-left: 3rem;
+  max-width: 110px;
+  height: auto;
+  margin-top: 0.3rem;
+  @include mq.respond-to(mq.$phone) {
+    width: 50%;
+    margin-left: 1rem;
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+  margin-left: 75%;
+  cursor: pointer;
+  @include mq.respond-to(mq.$phone) {
+    flex-direction: column;
+    position: absolute;
+    background-color: #E0E0E0;
+    z-index: 10;
+    top: -1rem;
+    padding: 1.5rem;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+  }
+
+}
+.visible{
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav-list-link {
+  font-size: vars.$fs-xs;
+  color: vars.$clr-secondary;
+  text-decoration: none;
+
+  @include mq.respond-to(mq.$phone) {
+    font-size: vars.$fs-xxs;
+  }
+}
